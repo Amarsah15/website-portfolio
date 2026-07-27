@@ -59,7 +59,7 @@ export default function Footer() {
               {["Instagram"].map((s) => (
                 <a
                   key={s}
-                  href="https://www.instagram.com/growowl_"
+                  href="https://www.instagram.com/growOwl_"
                   className="block text-sm text-white/60 mb-3 hover:text-white hover:translate-x-1 transition-all"
                 >
                   {s}
