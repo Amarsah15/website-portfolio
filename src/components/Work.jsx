@@ -2,38 +2,42 @@ import { useScrollReveal, useMultiReveal } from "../hooks/useScrollReveal";
 
 const projects = [
   {
-    id: "project-1",
-    image: "/images/project-1.png",
+    id: "car-wash",
+    image: "/images/work-car-wash.png",
     number: "/001/",
     year: "2026",
     tag: "Featured",
-    name: "Euphoria",
-    desc: "Full eCommerce redesign that increased conversion rates by 47% and average order value by 23%.",
+    name: "Auto Detailing Car Wash",
+    desc: "Booking-focused site for a car detailing studio in Siliguri, showcasing services and one-tap slot booking.",
+    link: "https://car-washing-website-psi.vercel.app/",
     large: true,
   },
   {
-    id: "project-2",
-    image: "/images/project-2.png",
+    id: "cheesy-classics",
+    image: "/images/work-cheesy-classics.png",
     number: "/002/",
-    year: "2025",
-    name: "CloudWatch",
-    desc: "SaaS dashboard design with real-time analytics and intuitive data visualization.",
+    year: "2026",
+    name: "Cheesy Classics",
+    desc: "Warm, appetite-driving landing page for a cosy cafe in Barasat, built around its signature dishes and menu.",
+    link: "https://classic-cheesy.vercel.app/",
   },
   {
-    id: "project-3",
-    image: "/images/project-3.png",
+    id: "arhan-fabricators",
+    image: "/images/work-arhan-fabricators.png",
     number: "/003/",
-    year: "2025",
-    name: "FinFlow",
-    desc: "Mobile banking app with a clean fintech UI that boosted user engagement by 60%.",
+    year: "2026",
+    name: "Arhan Fabricators",
+    desc: "Business website for a steel & iron fabrication workshop in Lucknow, built to drive WhatsApp and call enquiries.",
+    link: "https://arhan-fabricators.vercel.app/",
   },
   {
-    id: "project-4",
-    image: "/images/project-4.png",
+    id: "ddine-kitchen",
+    image: "/images/work-ddine-kitchen.png",
     number: "/004/",
-    year: "2024",
-    name: "Luxe Identity",
-    desc: "Complete brand identity system for a luxury fashion house - from logo to packaging.",
+    year: "2026",
+    name: "D Dine Kitchen",
+    desc: "Bold restaurant website with online ordering, table reservations, and a punchy brand look for D Dine Kitchen Salugara.",
+    link: "https://ddinekitchen.shop",
     large: true,
   },
 ];
@@ -69,10 +73,13 @@ export default function Work() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-14">
           {projects.map((p, i) => (
-            <div
+            <a
               key={p.id}
               ref={setCardRef(i)}
-              className={`bg-card rounded-2xl overflow-hidden cursor-pointer transition-all duration-500 hover:-translate-y-1.5 hover:shadow-[0_24px_48px_rgba(0,0,0,0.1)] ${p.large ? "md:col-span-2" : ""}`}
+              href={p.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={`block bg-card rounded-2xl overflow-hidden cursor-pointer transition-all duration-500 hover:-translate-y-1.5 hover:shadow-[0_24px_48px_rgba(0,0,0,0.1)] ${p.large ? "md:col-span-2" : ""}`}
             >
               <div
                 className={`relative overflow-hidden group ${p.large ? "aspect-[21/9]" : "aspect-[16/10]"}`}
@@ -85,7 +92,7 @@ export default function Work() {
                 />
                 <div className="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   <span className="text-sm font-semibold text-white px-6 py-3 bg-white/15 backdrop-blur-lg rounded-full border border-white/20">
-                    View Case Study →
+                    Visit Website →
                   </span>
                 </div>
               </div>
@@ -108,7 +115,7 @@ export default function Work() {
                 </h3>
                 <p className="text-sm text-ink/60 leading-[1.6]">{p.desc}</p>
               </div>
-            </div>
+            </a>
           ))}
         </div>
       </div>

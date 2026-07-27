@@ -23,11 +23,13 @@ export default function Footer() {
                 e.preventDefault();
                 scrollTo("home");
               }}
-              className="text-2xl font-bold tracking-[-0.04em] text-white block mb-4"
+              className="block mb-4"
             >
-              <span className="text-accent font-extrabold">(</span>Hopper
-              <span className="text-accent font-extrabold">)</span>360
-              <span className="text-[10px] align-super text-white/30">®</span>
+              <img
+                src="/images/growowl-logo-white.png"
+                alt="GrowOwl"
+                className="h-8 w-auto"
+              />
             </a>
             <p className="text-sm text-white/60 leading-[1.6] max-w-70">
               We build digital experiences that move the needle.
@@ -57,7 +59,7 @@ export default function Footer() {
               {["Instagram"].map((s) => (
                 <a
                   key={s}
-                  href="https://www.instagram.com/hopper360_"
+                  href="https://www.instagram.com/growowl_"
                   className="block text-sm text-white/60 mb-3 hover:text-white hover:translate-x-1 transition-all"
                 >
                   {s}
@@ -90,7 +92,7 @@ export default function Footer() {
         {/* Bottom */}
         <div className="flex flex-col md:flex-row items-center justify-between gap-4 pt-8">
           <p className="text-[13px] text-white/60">
-            © 2026 Hopper360 Studio. All rights reserved.
+            © 2026 GrowOwl Studio. All rights reserved.
           </p>
           <div className="flex gap-6">
             <a

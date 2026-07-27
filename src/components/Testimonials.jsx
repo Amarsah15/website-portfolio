@@ -2,19 +2,19 @@ import { useScrollReveal, useMultiReveal } from "../hooks/useScrollReveal";
 
 const cards = [
   {
-    text: '"The team at Hopper360 completely exceeded our expectations. Our site traffic doubled within 3 months of launch."',
-    name: "Rahul Mehta",
-    role: "Founder, Nrgy Inc.",
+    text: '"Customers can now see our services and just tap to book instead of me explaining everything over the phone every time. Simple, and it actually works."',
+    name: "Owner",
+    role: "Auto Detailing Car Wash, Siliguri",
   },
   {
-    text: '"Professional, creative, and incredibly responsive. They turned our vision into a stunning digital reality in record time."',
-    name: "Priya Sharma",
-    role: "Marketing Director, Medora",
+    text: '"Our regulars check the menu on the site before they even walk in now. It finally feels like a proper restaurant online, not something copy-pasted."',
+    name: "Owner",
+    role: "Cheesy Classics, Barasat",
   },
   {
-    text: '"Working with Hopper360 felt like having an in-house team. They truly understood our brand and brought it to life beautifully."',
-    name: "David Patel",
-    role: "CTO, CloudWatch",
+    text: '"Table bookings used to be all phone calls and back-and-forth. Now a good chunk of our reservations come straight from the website itself."',
+    name: "Owner",
+    role: "D Dine Kitchen, Salugara",
   },
 ];
 
@@ -37,24 +37,22 @@ export default function Testimonials() {
 
         <div ref={quoteRef} className="mt-10 mb-14">
           <blockquote className="font-serif text-[clamp(24px,3vw,36px)] font-normal leading-[1.4] tracking-[-0.02em] text-white max-w-[900px] mb-9">
-            "Choosing a digital partner isn't just about capabilities or
-            portfolios - it's about trust. Hopper360 didn't just deliver a
-            website; they delivered a{" "}
-            <em className="text-accent italic">transformation</em>."
+            "We just wanted people to see our work and message us on WhatsApp
+            - that's it. GrowOwl built exactly that, nothing extra. We've been
+            getting{" "}
+            <em className="text-accent italic">real enquiries</em> every week
+            since it went live."
           </blockquote>
           <div className="flex items-center gap-4">
-            <img
-              src="/images/avatar.png"
-              alt="Sarah Collins"
-              className="w-[52px] h-[52px] rounded-full object-cover border-2 border-white/15"
-              loading="lazy"
-            />
+            <div className="w-[52px] h-[52px] rounded-full bg-white/10 border-2 border-white/15 flex items-center justify-center text-white font-semibold text-lg">
+              AF
+            </div>
             <div>
               <span className="block text-[15px] font-semibold text-white">
-                Sarah Collins
+                Owner
               </span>
               <span className="text-[13px] text-white/60">
-                CEO, InnovateHealth
+                Arhan Fabricators, Lucknow
               </span>
             </div>
           </div>
