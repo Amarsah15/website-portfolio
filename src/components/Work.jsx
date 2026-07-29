@@ -1,21 +1,31 @@
+import { useRef } from "react";
 import { useScrollReveal, useMultiReveal } from "../hooks/useScrollReveal";
 
-const projects = [
+const openingProject = {
+  id: "lensaura-photography",
+  image: "/images/work-photographer.webp",
+  number: "/001/",
+  year: "2026",
+  tag: "Featured",
+  name: "LensAura Photography",
+  desc: "Cinematic booking site for an award-winning wedding & event photography studio, designed to turn visitors into session bookings.",
+  link: "https://photographer-hazel.vercel.app/",
+};
+
+const carouselProjects = [
   {
     id: "car-wash",
-    image: "/images/work-car-wash.png",
-    number: "/001/",
+    image: "/images/work-car-wash.webp",
+    number: "/002/",
     year: "2026",
-    tag: "Featured",
     name: "Auto Detailing Car Wash",
     desc: "Booking-focused site for a car detailing studio in Siliguri, showcasing services and one-tap slot booking.",
     link: "https://car-washing-website-psi.vercel.app/",
-    large: true,
   },
   {
     id: "cheesy-classics",
-    image: "/images/work-cheesy-classics.png",
-    number: "/002/",
+    image: "/images/work-cheesy-classics.webp",
+    number: "/003/",
     year: "2026",
     name: "Cheesy Classics",
     desc: "Warm, appetite-driving landing page for a cosy cafe in Barasat, built around its signature dishes and menu.",
@@ -23,8 +33,8 @@ const projects = [
   },
   {
     id: "arhan-fabricators",
-    image: "/images/work-arhan-fabricators.png",
-    number: "/003/",
+    image: "/images/work-arhan-fabricators.webp",
+    number: "/004/",
     year: "2026",
     name: "Arhan Fabricators",
     desc: "Business website for a steel & iron fabrication workshop in Lucknow, built to drive WhatsApp and call enquiries.",
@@ -32,20 +42,81 @@ const projects = [
   },
   {
     id: "ddine-kitchen",
-    image: "/images/work-ddine-kitchen.png",
-    number: "/004/",
+    image: "/images/work-ddine-kitchen.webp",
+    number: "/005/",
     year: "2026",
     name: "D Dine Kitchen",
     desc: "Bold restaurant website with online ordering, table reservations, and a punchy brand look for D Dine Kitchen Salugara.",
     link: "https://ddinekitchen.shop",
-    large: true,
   },
 ];
+
+const closingProject = {
+  id: "bold-and-beautiful",
+  image: "/images/work-bold-beautiful.webp",
+  number: "/006/",
+  year: "2026",
+  tag: "Featured",
+  name: "Bold & Beautiful Salon",
+  desc: "Elegant salon website for a premier beauty parlour in Salugara, Siliguri, built to showcase services and drive WhatsApp bookings.",
+  link: "https://www.boldandbeautiful.co.in/",
+};
+
+function ProjectCard({ p }) {
+  return (
+    <a
+      href={p.link}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="block bg-card rounded-2xl overflow-hidden cursor-pointer transition-all duration-500 hover:-translate-y-1.5 hover:shadow-[0_24px_48px_rgba(0,0,0,0.1)] group h-full"
+    >
+      <div className="relative overflow-hidden bg-ink/5">
+        <img
+          src={p.image}
+          alt={p.name}
+          loading="lazy"
+          className="w-full h-auto block transition-transform duration-500 group-hover:scale-[1.02]"
+        />
+        <div className="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+          <span className="text-sm font-semibold text-white px-6 py-3 bg-white/15 backdrop-blur-lg rounded-full border border-white/20">
+            Visit Website →
+          </span>
+        </div>
+      </div>
+      <div className="p-5 md:p-7">
+        <div className="flex items-center gap-3 mb-3">
+          <span className="font-serif italic text-base text-accent">
+            {p.number}
+          </span>
+          <span className="text-xs text-ink/40 font-medium">{p.year}</span>
+          {p.tag && (
+            <span className="text-[11px] font-semibold uppercase tracking-[0.08em] text-accent bg-accent/8 px-3 py-1 rounded-full">
+              {p.tag}
+            </span>
+          )}
+        </div>
+        <h3 className="text-[22px] font-semibold tracking-[-0.02em] mb-2">
+          {p.name}
+        </h3>
+        <p className="text-sm text-ink/60 leading-[1.6]">{p.desc}</p>
+      </div>
+    </a>
+  );
+}
 
 export default function Work() {
   const labelRef = useScrollReveal();
   const titleRef = useScrollReveal();
-  const setCardRef = useMultiReveal(projects.length);
+  const setCardRef = useMultiReveal(3);
+  const scrollerRef = useRef(null);
+
+  const scrollByCard = (dir) => {
+    const el = scrollerRef.current;
+    if (!el) return;
+    const card = el.querySelector("[data-card]");
+    const amount = card ? card.offsetWidth + 24 : el.offsetWidth * 0.8;
+    el.scrollBy({ left: dir * amount, behavior: "smooth" });
+  };
 
   return (
     <section id="work" className="py-16 lg:py-30 bg-cream-light">
@@ -71,52 +142,51 @@ export default function Work() {
           and digital strategy.
         </p>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-14">
-          {projects.map((p, i) => (
-            <a
-              key={p.id}
-              ref={setCardRef(i)}
-              href={p.link}
-              target="_blank"
-              rel="noopener noreferrer"
-              className={`block bg-card rounded-2xl overflow-hidden cursor-pointer transition-all duration-500 hover:-translate-y-1.5 hover:shadow-[0_24px_48px_rgba(0,0,0,0.1)] ${p.large ? "md:col-span-2" : ""}`}
-            >
+        {/* Opening banner */}
+        <div ref={setCardRef(0)} className="mt-14">
+          <ProjectCard p={openingProject} />
+        </div>
+
+        {/* Middle carousel */}
+        <div ref={setCardRef(1)} className="mt-8">
+          <div
+            ref={scrollerRef}
+            className="flex gap-6 overflow-x-auto snap-x snap-mandatory scroll-smooth pb-2 -mx-5 px-5 md:mx-0 md:px-0 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+          >
+            {carouselProjects.map((p) => (
               <div
-                className={`relative overflow-hidden group ${p.large ? "aspect-[21/9]" : "aspect-[16/10]"}`}
+                key={p.id}
+                data-card
+                className="snap-start shrink-0 w-[86%] sm:w-[62%] md:w-[46%] lg:w-[38%]"
               >
-                <img
-                  src={p.image}
-                  alt={p.name}
-                  loading="lazy"
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                />
-                <div className="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <span className="text-sm font-semibold text-white px-6 py-3 bg-white/15 backdrop-blur-lg rounded-full border border-white/20">
-                    Visit Website →
-                  </span>
-                </div>
+                <ProjectCard p={p} />
               </div>
-              <div className="p-5 md:p-7">
-                <div className="flex items-center gap-3 mb-3">
-                  <span className="font-serif italic text-base text-accent">
-                    {p.number}
-                  </span>
-                  <span className="text-xs text-ink/40 font-medium">
-                    {p.year}
-                  </span>
-                  {p.tag && (
-                    <span className="text-[11px] font-semibold uppercase tracking-[0.08em] text-accent bg-accent/8 px-3 py-1 rounded-full">
-                      {p.tag}
-                    </span>
-                  )}
-                </div>
-                <h3 className="text-[22px] font-semibold tracking-[-0.02em] mb-2">
-                  {p.name}
-                </h3>
-                <p className="text-sm text-ink/60 leading-[1.6]">{p.desc}</p>
-              </div>
-            </a>
-          ))}
+            ))}
+          </div>
+
+          <div className="flex items-center justify-center gap-4 mt-6">
+            <button
+              onClick={() => scrollByCard(-1)}
+              aria-label="Previous project"
+              type="button"
+              className="w-11 h-11 rounded-full border border-ink/15 flex items-center justify-center text-ink/70 hover:bg-ink hover:text-white hover:border-ink transition-colors duration-300"
+            >
+              ←
+            </button>
+            <button
+              onClick={() => scrollByCard(1)}
+              aria-label="Next project"
+              type="button"
+              className="w-11 h-11 rounded-full border border-ink/15 flex items-center justify-center text-ink/70 hover:bg-ink hover:text-white hover:border-ink transition-colors duration-300"
+            >
+              →
+            </button>
+          </div>
+        </div>
+
+        {/* Closing banner */}
+        <div ref={setCardRef(2)} className="mt-8">
+          <ProjectCard p={closingProject} />
         </div>
       </div>
     </section>

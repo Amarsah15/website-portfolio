@@ -1,9 +1,9 @@
 import { useScrollReveal } from "../hooks/useScrollReveal";
 
 const stats = [
-  { number: "95+", label: "Projects Delivered" },
-  { number: "40+", label: "Happy Clients" },
-  { number: "6", label: "Years Experience" },
+  { number: "20+", label: "Projects Delivered" },
+  { number: "15+", label: "Happy Clients" },
+  { number: "2+", label: "Years Experience" },
 ];
 
 export default function About() {
@@ -40,7 +40,7 @@ export default function About() {
                 We're not just another agency. We're a collective of strategic freelance designers and full stack developers who believe great digital work should be felt, not just seen. Every line of backend and frontend code is optimized to help your brand rank at the top.
               </p>
               <p className="text-base text-ink/60 leading-[1.75] mb-5">
-                Founded in 2020, we've grown from a small team of passionate freelancers into a premium digital studio and website builder collective trusted by clients across India and globally.
+                In just over 2 years, we've grown from a small team of passionate freelancers into a trusted website builder collective, delivering fast, conversion-focused sites for clients across India.
               </p>
             </div>
 
