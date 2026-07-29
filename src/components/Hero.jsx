@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useScrollReveal } from "../hooks/useScrollReveal";
 
 export default function Hero() {
@@ -13,6 +14,7 @@ export default function Hero() {
   return (
     <section
       id="home"
+      aria-label="Hero"
       className="pt-[140px] pb-16 lg:pb-30 min-h-screen flex items-center"
     >
       <div className="max-w-[1200px] mx-auto px-5 md:px-10 w-full">
@@ -43,7 +45,7 @@ export default function Hero() {
               ref={subRef}
               className="text-[17px] text-ink/60 leading-[1.7] mb-9 max-w-[460px]"
             >
-              From bespoke UI/UX design to custom full stack React development, we deliver premium, search-optimized web applications that rank at the top.
+              From bespoke UI/UX design to custom full stack React development, we deliver high-performance, search-optimized web applications that rank at the top.
             </p>
 
             <div ref={actionsRef} className="flex gap-3.5 flex-wrap mb-10">
@@ -78,8 +80,9 @@ export default function Hero() {
                 <span className="text-amber text-sm tracking-[2px]">★★★★★</span>
                 <span className="text-sm font-semibold text-ink">4.9 / 5</span>
               </div>
+              {/* NEEDS OWNER INPUT: confirm real client/project counts */}
               <p className="text-sm text-ink/60 leading-[1.5]">
-                We've helped <strong className="text-ink">95+</strong>{" "}
+                We've helped <strong className="text-ink">15+</strong>{" "}
                 businesses transform their digital presence
               </p>
             </div>
@@ -87,9 +90,12 @@ export default function Hero() {
 
           <div ref={imgRef} className="relative">
             <div className="rounded-3xl overflow-hidden relative aspect-[4/5] shadow-[0_24px_60px_rgba(0,0,0,0.12)] group">
-              <img
+              <Image
                 src="/images/hero.webp"
-                alt="Creative workspace"
+                alt="GrowOwl web design and development studio workspace"
+                width={1024}
+                height={1024}
+                priority
                 className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
               />
               <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/15 pointer-events-none" />

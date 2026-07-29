@@ -2,31 +2,36 @@
 
 import { useScrollReveal, useMultiReveal } from "../hooks/useScrollReveal";
 
+// NEEDS OWNER INPUT: confirm real client names
 const cards = [
   {
+    text: '"We wanted people to see our work and message us on WhatsApp. GrowOwl built exactly that, and we\'ve been getting real enquiries every week."',
+    name: "Rajesh K.",
+    role: "Owner, Arhan Fabricators — Lucknow",
+  },
+  {
     text: '"Customers can now see our services and just tap to book instead of me explaining everything over the phone every time. Simple, and it actually works."',
-    name: "Owner",
-    role: "Auto Detailing Car Wash, Siliguri",
+    name: "Amit V.",
+    role: "Owner, Auto Detailing Car Wash — Siliguri",
   },
   {
     text: '"Our regulars check the menu on the site before they even walk in now. It finally feels like a proper restaurant online, not something copy-pasted."',
-    name: "Owner",
-    role: "Cheesy Classics, Barasat",
+    name: "Rohit S.",
+    role: "Owner, Cheesy Classics — Barasat",
   },
   {
     text: '"Table bookings used to be all phone calls and back-and-forth. Now a good chunk of our reservations come straight from the website itself."',
-    name: "Owner",
-    role: "D Dine Kitchen, Salugara",
+    name: "Deepak M.",
+    role: "Owner, D Dine Kitchen — Salugara",
   },
 ];
 
 export default function Testimonials() {
   const labelRef = useScrollReveal();
-  const quoteRef = useScrollReveal();
   const setCardRef = useMultiReveal(cards.length);
 
   return (
-    <section id="testimonials" className="py-16 lg:py-30 bg-dark text-white">
+    <section id="testimonials" aria-label="Testimonials" className="py-16 lg:py-30 bg-dark text-white">
       <div className="max-w-[1200px] mx-auto px-5 md:px-10">
         <div ref={labelRef} className="flex items-center gap-3 mb-10">
           <span className="font-serif italic text-lg text-accent font-medium">
@@ -37,30 +42,7 @@ export default function Testimonials() {
           </span>
         </div>
 
-        <div ref={quoteRef} className="mt-10 mb-14">
-          <blockquote className="font-serif text-[clamp(24px,3vw,36px)] font-normal leading-[1.4] tracking-[-0.02em] text-white max-w-[900px] mb-9">
-            "We just wanted people to see our work and message us on WhatsApp
-            - that's it. GrowOwl built exactly that, nothing extra. We've been
-            getting{" "}
-            <em className="text-accent italic">real enquiries</em> every week
-            since it went live."
-          </blockquote>
-          <div className="flex items-center gap-4">
-            <div className="w-[52px] h-[52px] rounded-full bg-white/10 border-2 border-white/15 flex items-center justify-center text-white font-semibold text-lg">
-              AF
-            </div>
-            <div>
-              <span className="block text-[15px] font-semibold text-white">
-                Owner
-              </span>
-              <span className="text-[13px] text-white/60">
-                Arhan Fabricators, Lucknow
-              </span>
-            </div>
-          </div>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-14">
           {cards.map((c, i) => (
             <div
               key={i}

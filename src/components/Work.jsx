@@ -1,6 +1,7 @@
 "use client";
 
 import { useRef } from "react";
+import Image from "next/image";
 import { useScrollReveal, useMultiReveal } from "../hooks/useScrollReveal";
 
 const openingProject = {
@@ -48,7 +49,7 @@ const carouselProjects = [
     number: "/005/",
     year: "2026",
     name: "Bold & Beautiful Salon",
-    desc: "Elegant salon website for a premier beauty parlour in Salugara, Siliguri, built to showcase services and drive WhatsApp bookings.",
+    desc: "Elegant salon website for a top-tier beauty parlour in Salugara, Siliguri, built to showcase services and drive WhatsApp bookings.",
     link: "https://www.boldandbeautiful.co.in/",
   },
 ];
@@ -73,9 +74,11 @@ function ProjectCard({ p }) {
       className="block bg-card rounded-2xl overflow-hidden cursor-pointer transition-all duration-500 hover:-translate-y-1.5 hover:shadow-[0_24px_48px_rgba(0,0,0,0.1)] group h-full"
     >
       <div className="relative overflow-hidden bg-ink/5">
-        <img
+        <Image
           src={p.image}
-          alt={p.name}
+          alt={`${p.name} — ${p.desc}`}
+          width={1600}
+          height={730}
           loading="lazy"
           className="w-full h-auto block transition-transform duration-500 group-hover:scale-[1.02]"
         />
@@ -121,7 +124,7 @@ export default function Work() {
   };
 
   return (
-    <section id="work" className="py-16 lg:py-30 bg-cream-light">
+    <section id="work" aria-labelledby="work-heading" className="py-16 lg:py-30 bg-cream-light">
       <div className="max-w-[1200px] mx-auto px-5 md:px-10">
         <div ref={labelRef} className="flex items-center gap-3 mb-10">
           <span className="font-serif italic text-lg text-accent font-medium">
@@ -133,6 +136,7 @@ export default function Work() {
         </div>
 
         <h2
+          id="work-heading"
           ref={titleRef}
           className="text-[clamp(32px,4vw,48px)] font-semibold leading-[1.2] tracking-[-0.03em] text-ink max-w-[800px] text-center mx-auto"
         >

@@ -33,7 +33,7 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="py-20 lg:py-30 bg-dark text-white">
+    <section id="contact" aria-labelledby="contact-heading" className="py-20 lg:py-30 bg-dark text-white">
       <div className="max-w-[1200px] mx-auto px-5 md:px-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-start">
           {/* --- Left --- */}
@@ -48,6 +48,7 @@ export default function Contact() {
             </div>
 
             <h2
+              id="contact-heading"
               ref={titleRef}
               className="text-[clamp(32px,4vw,48px)] font-semibold leading-[1.2] tracking-[-0.03em] text-white max-w-[800px]"
             >
@@ -60,7 +61,7 @@ export default function Contact() {
 
             <p className="text-base text-white/60 leading-[1.7] mt-5 mb-10 max-w-110">
               Have a project in mind? We'd love to hear about it. Drop us a line
-              and we'll get back to you within half an hours.
+              and we'll get back to you within half an hour.
             </p>
 
             <div className="flex flex-col gap-6">
@@ -146,16 +147,16 @@ export default function Contact() {
                 <option value="" disabled className="bg-[#0a0a0a]">
                   Select a range
                 </option>
-                <option value="25k-50k" className="bg-[#0a0a0a]">
+                <option value="5k-10k" className="bg-[#0a0a0a]">
                   ₹5,000 - ₹10,000
                 </option>
-                <option value="50k-1L" className="bg-[#0a0a0a]">
+                <option value="10k-25k" className="bg-[#0a0a0a]">
                   ₹10,000 - ₹25,000
                 </option>
-                <option value="1L-2.5L" className="bg-[#0a0a0a]">
+                <option value="25k-50k" className="bg-[#0a0a0a]">
                   ₹25,000 - ₹50,000
                 </option>
-                <option value="2.5L+" className="bg-[#0a0a0a]">
+                <option value="50k-plus" className="bg-[#0a0a0a]">
                   ₹50,000+
                 </option>
               </select>

@@ -18,12 +18,16 @@ const playfair = Playfair_Display({
 
 export const metadata = {
   metadataBase: new URL("https://www.growowl.online"),
-  title: "GrowOwl | Digital Agency",
+  title: "GrowOwl | Web Design, Development & SEO Services Agency",
   description:
-    "GrowOwl is a premier freelance website builder and custom full stack developer. We design and build high-performance React websites, custom database backends, MERN stack apps, and digital experiences that drive growth and rank high on search engines.",
+    "GrowOwl is a trusted freelance website builder, full stack developer, and SEO services agency. We design and build high-performance React websites, custom database backends, MERN stack apps, and search-optimized digital experiences that drive growth and rank high on search engines.",
   keywords: [
     "freelance website builder",
     "freelance full stack developer",
+    "SEO services",
+    "Search Engine Optimization",
+    "SEO agency",
+    "freelance SEO specialist",
     "full stack web developer",
     "hire freelance full stack developer",
     "freelance web developer",
@@ -51,16 +55,16 @@ export const metadata = {
   openGraph: {
     type: "website",
     url: "https://www.growowl.online/",
-    title: "GrowOwl | Digital Agency",
+    title: "GrowOwl | Web Design, Development & SEO Services Agency",
     description:
-      "Bespoke freelance website builder and full stack developer crafting premium digital experiences that rank high and move the needle for growing brands.",
+      "Bespoke freelance website builder, full stack developer, and SEO services agency crafting top-tier digital experiences that rank high and deliver measurable business growth.",
     siteName: "GrowOwl",
     images: [
       {
         url: "https://www.growowl.online/images/hero.webp",
         width: 1200,
         height: 630,
-        alt: "GrowOwl | Digital Agency",
+        alt: "GrowOwl | Web Design, Development & SEO Services Agency",
       },
     ],
     locale: "en_US",
@@ -68,9 +72,9 @@ export const metadata = {
   twitter: {
     card: "summary_large_image",
     url: "https://www.growowl.online/",
-    title: "GrowOwl | Digital Agency",
+    title: "GrowOwl | Web Design, Development & SEO Services Agency",
     description:
-      "Bespoke freelance website builder and full stack developer crafting premium digital experiences that rank high and move the needle for growing brands.",
+      "Bespoke freelance website builder, full stack developer, and SEO services agency crafting top-tier digital experiences that rank high and deliver measurable business growth.",
     images: ["https://www.growowl.online/images/hero.webp"],
   },
   robots: {
@@ -117,7 +121,7 @@ const jsonLd = {
     latitude: 22.5726,
     longitude: 88.3639,
   },
-  "openingHoursSpecification": {
+  openingHoursSpecification: {
     "@type": "OpeningHoursSpecification",
     dayOfWeek: [
       "Monday",
@@ -133,8 +137,10 @@ const jsonLd = {
   },
   sameAs: ["https://www.instagram.com/growowl_"],
   description:
-    "Premium freelance website builder and custom full stack developer designing bold web apps, backend databases, and campaigns that move the needle.",
+    "Custom freelance website builder, full stack developer, and SEO services agency designing bold web apps, backend databases, search-optimized campaigns, and digital strategies.",
   knowsAbout: [
+    "SEO Services",
+    "Search Engine Optimization",
     "Freelance Website Builder",
     "Full Stack Development",
     "MERN Stack Developer",
@@ -146,6 +152,48 @@ const jsonLd = {
     "E-commerce Website Building",
     "Custom Portfolios",
   ],
+  hasOfferCatalog: {
+    "@type": "OfferCatalog",
+    name: "GrowOwl Core Digital Services",
+    itemListElement: [
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "Website Design & UI/UX Design",
+          description:
+            "Bespoke user interface and user experience design for modern web applications.",
+        },
+      },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "Full Stack Web Development",
+          description:
+            "Custom React, Next.js, and Node.js full stack web application development.",
+        },
+      },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "SEO Services & Search Engine Optimization",
+          description:
+            "On-page, technical, and structural SEO services to boost search engine rankings.",
+        },
+      },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "Digital Strategy & Branding",
+          description:
+            "Comprehensive digital growth strategies and brand identity development.",
+        },
+      },
+    ],
+  },
 };
 
 export default function RootLayout({ children }) {

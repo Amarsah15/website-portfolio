@@ -5,28 +5,18 @@ import { useScrollReveal, useMultiReveal } from "../hooks/useScrollReveal";
 const steps = [
   {
     number: "/001/",
-    title: "Discovery",
-    desc: "We listen first - no jargon. This phase sets the foundation by uncovering your goals, audience, and competitive landscape through workshops and research.",
+    title: "Discovery & Strategy",
+    desc: "We uncover your business goals, audience, and market through deep research, mapping out a data-backed digital roadmap before writing code.",
   },
   {
     number: "/002/",
-    title: "Strategy",
-    desc: "We create a comprehensive roadmap that aligns business objectives with user needs. Every decision is backed by data and driven by insight.",
+    title: "Design & Build",
+    desc: "We bring your brand to life with pixel-perfect UI/UX design, custom full-stack React and Node.js development, and a polished deployment.",
   },
   {
     number: "/003/",
-    title: "Creation",
-    desc: "We build your digital assets with precision. Our design and development teams bring the strategy to life with beautiful, functional solutions.",
-  },
-  {
-    number: "/004/",
-    title: "Launch",
-    desc: "We ensure a smooth deployment. From performance optimization to cross-browser testing, every detail is polished before going live.",
-  },
-  {
-    number: "/005/",
     title: "Growth",
-    desc: "We continuously optimize performance. After launch, we shift into a growth mindset - tracking metrics, iterating on design, and scaling impact.",
+    desc: "We continuously optimize performance post-launch — tracking search metrics, refining conversion pathways, and scaling your digital presence.",
   },
 ];
 
@@ -36,7 +26,7 @@ export default function Process() {
   const setStepRef = useMultiReveal(steps.length);
 
   return (
-    <section id="process" className="py-16 lg:py-30">
+    <section id="process" aria-labelledby="process-heading" className="py-16 lg:py-30">
       <div className="max-w-[1200px] mx-auto px-5 md:px-10">
         <div ref={labelRef} className="flex items-center gap-3 mb-10">
           <span className="font-serif italic text-lg text-accent font-medium">
@@ -48,6 +38,7 @@ export default function Process() {
         </div>
 
         <h2
+          id="process-heading"
           ref={titleRef}
           className="text-[clamp(32px,4vw,48px)] font-semibold leading-[1.2] tracking-[-0.03em] text-ink max-w-[800px] text-center mx-auto"
         >

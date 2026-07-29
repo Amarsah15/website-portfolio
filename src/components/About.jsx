@@ -15,7 +15,7 @@ export default function About() {
   const statsRef = useScrollReveal();
 
   return (
-    <section id="about" className="py-16 lg:py-30">
+    <section id="about" aria-labelledby="about-heading" className="py-16 lg:py-30">
       <div className="max-w-[1200px] mx-auto px-5 md:px-10">
         <div ref={labelRef} className="flex items-center gap-3 mb-10">
           <span className="font-serif italic text-lg text-accent font-medium">
@@ -28,10 +28,11 @@ export default function About() {
 
         <div className="grid grid-cols-1 lg:grid-cols-[1.2fr_1fr] gap-10 lg:gap-20 items-start">
           <h2
+            id="about-heading"
             ref={titleRef}
             className="text-[clamp(32px,4vw,48px)] font-semibold leading-[1.2] tracking-[-0.03em] text-ink max-w-[800px]"
           >
-            As a premier{" "}
+            As a dedicated{" "}
             <em className="font-serif italic font-medium">freelance website builder</em>{" "}
             and custom full stack developer collective, we cover everything from visual brand identity to backends and databases.
           </h2>

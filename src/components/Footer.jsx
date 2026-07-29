@@ -1,5 +1,7 @@
 "use client";
 
+import Image from "next/image";
+
 export default function Footer() {
   const scrollTo = (id) => {
     const el = document.getElementById(id);
@@ -12,6 +14,7 @@ export default function Footer() {
   return (
     <footer
       id="footer"
+      aria-label="Footer"
       className="pt-20 pb-10 bg-dark text-white border-t border-white/6"
     >
       <div className="max-w-300 mx-auto px-5 md:px-10">
@@ -21,29 +24,33 @@ export default function Footer() {
           <div>
             <a
               href="#home"
+              aria-label="GrowOwl Home"
               onClick={(e) => {
                 e.preventDefault();
                 scrollTo("home");
               }}
               className="block mb-4"
             >
-              <img
+              <Image
                 src="/images/growowl-logo-white.webp"
-                alt="GrowOwl"
+                alt="GrowOwl logo"
+                width={495}
+                height={172}
+                loading="lazy"
                 className="h-8 w-auto"
               />
             </a>
             <p className="text-sm text-white/60 leading-[1.6] max-w-70">
-              We build digital experiences that move the needle.
+              We build digital experiences that drive real results.
             </p>
           </div>
 
           {/* Links */}
           <div className="grid grid-cols-2 md:grid-cols-3 gap-10">
             <div>
-              <h4 className="text-[13px] font-semibold uppercase tracking-[0.08em] text-white mb-5">
+              <h3 className="text-[13px] font-semibold uppercase tracking-[0.08em] text-white mb-5">
                 Navigation
-              </h4>
+              </h3>
               {["home", "about", "work", "services", "pricing"].map((s) => (
                 <button
                   key={s}
@@ -55,9 +62,9 @@ export default function Footer() {
               ))}
             </div>
             <div>
-              <h4 className="text-[13px] font-semibold uppercase tracking-[0.08em] text-white mb-5">
+              <h3 className="text-[13px] font-semibold uppercase tracking-[0.08em] text-white mb-5">
                 Socials
-              </h4>
+              </h3>
               {["Instagram"].map((s) => (
                 <a
                   key={s}
@@ -69,9 +76,9 @@ export default function Footer() {
               ))}
             </div>
             <div>
-              <h4 className="text-[13px] font-semibold uppercase tracking-[0.08em] text-white mb-5">
+              <h3 className="text-[13px] font-semibold uppercase tracking-[0.08em] text-white mb-5">
                 Contact
-              </h4>
+              </h3>
               <a
                 href="tel:+918609504186"
                 className="block text-sm text-white/60 mb-3 hover:text-white hover:translate-x-1 transition-all"

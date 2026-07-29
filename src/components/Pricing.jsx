@@ -102,7 +102,7 @@ export default function Pricing() {
   const setCardRef = useMultiReveal(plans.length);
 
   return (
-    <section id="pricing" className="py-16 lg:py-30 bg-cream-light">
+    <section id="pricing" aria-labelledby="pricing-heading" className="py-16 lg:py-30 bg-cream-light">
       <div className="max-w-[1200px] mx-auto px-5 md:px-10">
         <div ref={labelRef} className="flex items-center gap-3 mb-10">
           <span className="font-serif italic text-lg text-accent font-medium">
@@ -114,6 +114,7 @@ export default function Pricing() {
         </div>
 
         <h2
+          id="pricing-heading"
           ref={titleRef}
           className="text-[clamp(32px,4vw,48px)] font-semibold leading-[1.2] tracking-[-0.03em] text-ink max-w-[800px] text-center mx-auto"
         >
@@ -138,9 +139,9 @@ export default function Pricing() {
                 </div>
               )}
               <div className="mb-6">
-                <span className="text-xl font-semibold tracking-[-0.02em] block mb-2">
+                <h3 className="text-xl font-semibold tracking-[-0.02em] block mb-2">
                   {p.label}
-                </span>
+                </h3>
                 <p className="text-sm text-ink/60 leading-[1.5]">{p.tagline}</p>
               </div>
               <div className="flex items-baseline gap-3 flex-wrap mb-4">

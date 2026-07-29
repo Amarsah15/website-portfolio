@@ -7,7 +7,7 @@ const services = [
   {
     number: "/001/",
     name: "Freelance Full Stack Development",
-    desc: "We engineer robust, custom web solutions as a premier freelance full stack website builder. From blazing-fast static sites to complex full-stack React and Node.js applications, every line of code is written for speed, search engines, and maintainability.",
+    desc: "We engineer robust, custom web solutions as a trusted freelance full stack website builder. From blazing-fast static sites to complex full-stack React and Node.js applications, every line of code is written for speed, search engines, and maintainability.",
     items: [
       "Full Stack Website Building",
       "React & Node.js Applications",
@@ -19,7 +19,7 @@ const services = [
   {
     number: "/002/",
     name: "Design & Branding",
-    desc: "We create premium website designs, user interfaces, and visual identities that leave a lasting impression. From site wireframes to pixel-perfect UI, we build custom stories.",
+    desc: "We create polished website designs, user interfaces, and visual identities that leave a lasting impression. From site wireframes to pixel-perfect UI, we build custom stories.",
     items: [
       "Web & UI/UX Design",
       "Brand Identity Systems",
@@ -62,7 +62,7 @@ export default function Services() {
   const toggle = (i) => setActiveIndex((prev) => (prev === i ? -1 : i));
 
   return (
-    <section id="services" className="py-16 lg:py-30">
+    <section id="services" aria-labelledby="services-heading" className="py-16 lg:py-30">
       <div className="max-w-[1200px] mx-auto px-5 md:px-10">
         <div ref={labelRef} className="flex items-center gap-3 mb-10">
           <span className="font-serif italic text-lg text-accent font-medium">
@@ -74,6 +74,7 @@ export default function Services() {
         </div>
 
         <h2
+          id="services-heading"
           ref={titleRef}
           className="text-[clamp(32px,4vw,48px)] font-semibold leading-[1.2] tracking-[-0.03em] text-ink max-w-[800px]"
         >

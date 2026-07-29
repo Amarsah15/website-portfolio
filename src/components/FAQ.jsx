@@ -38,7 +38,7 @@ export default function FAQ() {
   const toggle = (i) => setActiveIndex((prev) => (prev === i ? -1 : i));
 
   return (
-    <section id="faq" className="py-16 lg:py-30">
+    <section id="faq" aria-labelledby="faq-heading" className="py-16 lg:py-30">
       <div className="max-w-[1200px] mx-auto px-5 md:px-10">
         <div ref={labelRef} className="flex items-center gap-3 mb-10">
           <span className="font-serif italic text-lg text-accent font-medium">
@@ -50,6 +50,7 @@ export default function FAQ() {
         </div>
 
         <h2
+          id="faq-heading"
           ref={titleRef}
           className="text-[clamp(32px,4vw,48px)] font-semibold leading-[1.2] tracking-[-0.03em] text-ink max-w-[800px]"
         >
@@ -70,9 +71,9 @@ export default function FAQ() {
                   className="flex items-center justify-between w-full py-6 cursor-pointer text-left gap-5 hover:pl-2 transition-all"
                   aria-expanded={isOpen}
                 >
-                  <span className="text-[17px] font-medium leading-[1.4] tracking-[-0.01em]">
+                  <h3 className="text-[17px] font-medium leading-[1.4] tracking-[-0.01em]">
                     {f.q}
-                  </span>
+                  </h3>
                   <svg
                     className="shrink-0"
                     width="20"
