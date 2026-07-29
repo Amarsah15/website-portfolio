@@ -1,3 +1,5 @@
+"use client";
+
 export default function Footer() {
   const scrollTo = (id) => {
     const el = document.getElementById(id);
@@ -26,7 +28,7 @@ export default function Footer() {
               className="block mb-4"
             >
               <img
-                src="/images/growowl-logo-white.png"
+                src="/images/growowl-logo-white.webp"
                 alt="GrowOwl"
                 className="h-8 w-auto"
               />

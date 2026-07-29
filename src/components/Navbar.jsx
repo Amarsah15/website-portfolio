@@ -1,3 +1,5 @@
+"use client";
+
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
@@ -90,7 +92,7 @@ export default function Navbar() {
         >
           <a href="#home" className="flex items-center group shrink-0">
             <img
-              src="/images/growowl-logo.png"
+              src="/images/growowl-logo.webp"
               alt="GrowOwl"
               className="h-7 sm:h-8 w-auto hover:opacity-70 transition-opacity"
             />

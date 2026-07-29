@@ -1,3 +1,5 @@
+"use client";
+
 import { useScrollReveal, useMultiReveal } from "../hooks/useScrollReveal";
 
 const Check = () => (

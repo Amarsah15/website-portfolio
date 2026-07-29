@@ -1,3 +1,5 @@
+"use client";
+
 import { useScrollReveal } from "../hooks/useScrollReveal";
 
 export default function Hero() {
@@ -86,7 +88,7 @@ export default function Hero() {
           <div ref={imgRef} className="relative">
             <div className="rounded-3xl overflow-hidden relative aspect-[4/5] shadow-[0_24px_60px_rgba(0,0,0,0.12)] group">
               <img
-                src="/images/hero.png"
+                src="/images/hero.webp"
                 alt="Creative workspace"
                 className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
               />

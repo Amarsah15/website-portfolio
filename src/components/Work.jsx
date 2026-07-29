@@ -1,35 +1,37 @@
+"use client";
+
 import { useRef } from "react";
 import { useScrollReveal, useMultiReveal } from "../hooks/useScrollReveal";
 
 const openingProject = {
-  id: "lensaura-photography",
-  image: "/images/work-photographer.webp",
+  id: "ddine-kitchen",
+  image: "/images/work-ddine-kitchen.webp",
   number: "/001/",
   year: "2026",
   tag: "Featured",
-  name: "LensAura Photography",
-  desc: "Cinematic booking site for an award-winning wedding & event photography studio, designed to turn visitors into session bookings.",
-  link: "https://photographer-hazel.vercel.app/",
+  name: "D Dine Kitchen",
+  desc: "Bold restaurant website with online ordering, table reservations, and a punchy brand look for D Dine Kitchen Salugara.",
+  link: "https://ddinekitchen.shop",
 };
 
 const carouselProjects = [
   {
+    id: "lensaura-photography",
+    image: "/images/work-photographer.webp",
+    number: "/002/",
+    year: "2026",
+    name: "LensAura Photography",
+    desc: "Cinematic booking site for an award-winning wedding & event photography studio, designed to turn visitors into session bookings.",
+    link: "https://photographer-hazel.vercel.app/",
+  },
+  {
     id: "car-wash",
     image: "/images/work-car-wash.webp",
-    number: "/002/",
+    number: "/003/",
     year: "2026",
     name: "Auto Detailing Car Wash",
     desc: "Booking-focused site for a car detailing studio in Siliguri, showcasing services and one-tap slot booking.",
     link: "https://car-washing-website-psi.vercel.app/",
-  },
-  {
-    id: "cheesy-classics",
-    image: "/images/work-cheesy-classics.webp",
-    number: "/003/",
-    year: "2026",
-    name: "Cheesy Classics",
-    desc: "Warm, appetite-driving landing page for a cosy cafe in Barasat, built around its signature dishes and menu.",
-    link: "https://classic-cheesy.vercel.app/",
   },
   {
     id: "arhan-fabricators",
@@ -41,25 +43,25 @@ const carouselProjects = [
     link: "https://arhan-fabricators.vercel.app/",
   },
   {
-    id: "ddine-kitchen",
-    image: "/images/work-ddine-kitchen.webp",
+    id: "bold-and-beautiful",
+    image: "/images/work-bold-beautiful.webp",
     number: "/005/",
     year: "2026",
-    name: "D Dine Kitchen",
-    desc: "Bold restaurant website with online ordering, table reservations, and a punchy brand look for D Dine Kitchen Salugara.",
-    link: "https://ddinekitchen.shop",
+    name: "Bold & Beautiful Salon",
+    desc: "Elegant salon website for a premier beauty parlour in Salugara, Siliguri, built to showcase services and drive WhatsApp bookings.",
+    link: "https://www.boldandbeautiful.co.in/",
   },
 ];
 
 const closingProject = {
-  id: "bold-and-beautiful",
-  image: "/images/work-bold-beautiful.webp",
+  id: "cheesy-classics",
+  image: "/images/work-cheesy-classics.webp",
   number: "/006/",
   year: "2026",
   tag: "Featured",
-  name: "Bold & Beautiful Salon",
-  desc: "Elegant salon website for a premier beauty parlour in Salugara, Siliguri, built to showcase services and drive WhatsApp bookings.",
-  link: "https://www.boldandbeautiful.co.in/",
+  name: "Cheesy Classics",
+  desc: "Warm, appetite-driving landing page for a cosy cafe in Barasat, built around its signature dishes and menu.",
+  link: "https://classic-cheesy.vercel.app/",
 };
 
 function ProjectCard({ p }) {
