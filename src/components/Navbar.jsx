@@ -89,11 +89,11 @@ export default function Navbar() {
           }`}
         >
           <a href="#home" className="flex items-center group shrink-0">
-            <span className="text-xl font-bold tracking-[-0.04em] text-ink hover:opacity-70 transition-opacity">
-              <span className="text-accent font-extrabold">(</span>Hopper
-              <span className="text-accent font-extrabold">)</span>360
-              <span className="text-[10px] align-super text-ink/40">®</span>
-            </span>
+            <img
+              src="/images/growowl-logo.png"
+              alt="GrowOwl"
+              className="h-7 sm:h-8 w-auto hover:opacity-70 transition-opacity"
+            />
           </a>
 
           <div className="hidden md:flex items-center gap-6 lg:gap-8 absolute left-1/2 -translate-x-1/2">

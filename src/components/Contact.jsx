@@ -104,7 +104,7 @@ export default function Contact() {
                 name="name"
                 value={formData.name}
                 onChange={handleChange}
-                placeholder="Hopper360 Studio"
+                placeholder="GrowOwl Studio"
                 required
                 className="w-full px-[18px] py-3.5 bg-white/6 border border-white/10 rounded-xl text-white text-[15px] placeholder:text-white/25 outline-none focus:border-accent focus:bg-white/10 transition-all"
               />
@@ -122,7 +122,7 @@ export default function Contact() {
                 name="email"
                 value={formData.email}
                 onChange={handleChange}
-                placeholder="hopper360@company.com"
+                placeholder="growowl@company.com"
                 required
                 className="w-full px-[18px] py-3.5 bg-white/6 border border-white/10 rounded-xl text-white text-[15px] placeholder:text-white/25 outline-none focus:border-accent focus:bg-white/10 transition-all"
               />
