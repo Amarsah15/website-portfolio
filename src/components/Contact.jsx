@@ -33,7 +33,7 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" aria-labelledby="contact-heading" className="py-20 lg:py-30 bg-dark text-white">
+    <section id="contact" aria-labelledby="contact-heading" className="py-16 lg:py-20 bg-dark text-white">
       <div className="max-w-[1200px] mx-auto px-5 md:px-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-start">
           {/* --- Left --- */}
@@ -135,7 +135,7 @@ export default function Contact() {
                 htmlFor="budget"
                 className="block text-[13px] font-medium text-white/60 mb-2"
               >
-                Project Budget
+                Project / Monthly Budget
               </label>
               <select
                 id="budget"
@@ -147,17 +147,17 @@ export default function Contact() {
                 <option value="" disabled className="bg-[#0a0a0a]">
                   Select a range
                 </option>
-                <option value="5k-10k" className="bg-[#0a0a0a]">
-                  ₹5,000 - ₹10,000
+                <option value="under-5k" className="bg-[#0a0a0a]">
+                  Under ₹5,000
                 </option>
-                <option value="10k-25k" className="bg-[#0a0a0a]">
-                  ₹10,000 - ₹25,000
+                <option value="5k-15k" className="bg-[#0a0a0a]">
+                  ₹5,000 - ₹15,000
                 </option>
-                <option value="25k-50k" className="bg-[#0a0a0a]">
-                  ₹25,000 - ₹50,000
+                <option value="15k-30k" className="bg-[#0a0a0a]">
+                  ₹15,000 - ₹30,000
                 </option>
-                <option value="50k-plus" className="bg-[#0a0a0a]">
-                  ₹50,000+
+                <option value="30k-plus" className="bg-[#0a0a0a]">
+                  ₹30,000+
                 </option>
               </select>
             </div>

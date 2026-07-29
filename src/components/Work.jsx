@@ -124,7 +124,7 @@ export default function Work() {
   };
 
   return (
-    <section id="work" aria-labelledby="work-heading" className="py-16 lg:py-30 bg-cream-light">
+    <section id="work" aria-labelledby="work-heading" className="py-14 lg:py-20 bg-cream-light">
       <div className="max-w-[1200px] mx-auto px-5 md:px-10">
         <div ref={labelRef} className="flex items-center gap-3 mb-10">
           <span className="font-serif italic text-lg text-accent font-medium">

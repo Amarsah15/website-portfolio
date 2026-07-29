@@ -31,7 +31,7 @@ export default function Testimonials() {
   const setCardRef = useMultiReveal(cards.length);
 
   return (
-    <section id="testimonials" aria-label="Testimonials" className="py-16 lg:py-30 bg-dark text-white">
+    <section id="testimonials" aria-label="Testimonials" className="py-14 lg:py-20 bg-dark text-white">
       <div className="max-w-[1200px] mx-auto px-5 md:px-10">
         <div ref={labelRef} className="flex items-center gap-3 mb-10">
           <span className="font-serif italic text-lg text-accent font-medium">

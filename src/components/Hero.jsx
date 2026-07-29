@@ -15,7 +15,7 @@ export default function Hero() {
     <section
       id="home"
       aria-label="Hero"
-      className="pt-[140px] pb-16 lg:pb-30 min-h-screen flex items-center"
+      className="pt-[140px] pb-14 lg:pb-20 lg:min-h-[85vh] flex items-center"
     >
       <div className="max-w-[1200px] mx-auto px-5 md:px-10 w-full">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-20 items-center">
@@ -26,7 +26,7 @@ export default function Hero() {
             >
               <span className="w-2 h-2 rounded-full bg-green animate-pulse-dot" />
               <span className="text-[13px] font-medium text-ink/60">
-                Available for new projects - 2026
+                Available for new project
               </span>
             </div>
 

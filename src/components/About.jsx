@@ -15,7 +15,7 @@ export default function About() {
   const statsRef = useScrollReveal();
 
   return (
-    <section id="about" aria-labelledby="about-heading" className="py-16 lg:py-30">
+    <section id="about" aria-labelledby="about-heading" className="py-14 lg:py-20">
       <div className="max-w-[1200px] mx-auto px-5 md:px-10">
         <div ref={labelRef} className="flex items-center gap-3 mb-10">
           <span className="font-serif italic text-lg text-accent font-medium">
