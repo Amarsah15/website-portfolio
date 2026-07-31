@@ -3,9 +3,8 @@
 import { useScrollReveal } from "../hooks/useScrollReveal";
 
 const stats = [
-  { number: "20+", label: "Projects Delivered" },
-  { number: "15+", label: "Happy Clients" },
-  { number: "2+", label: "Years Experience" },
+  { number: "15+", label: "Completed Projects" },
+  { number: "100%", label: "Client Satisfaction" },
 ];
 
 export default function About() {
@@ -49,7 +48,7 @@ export default function About() {
 
             <div
               ref={statsRef}
-              className="grid grid-cols-3 gap-5 lg:gap-8 mt-10 pt-10 border-t border-ink/10"
+              className="grid grid-cols-2 gap-5 lg:gap-8 mt-10 pt-10 border-t border-ink/10"
             >
               {stats.map((s) => (
                 <div key={s.label}>
